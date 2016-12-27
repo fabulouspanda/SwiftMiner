@@ -2,9 +2,8 @@ BFGMiner:
 St. Barbara's Faithfully Glorified Mining Initiative Naturally Exceeding Rivals
 or Basically a Freaking Good Miner
 
-This is a multi-threaded multi-pool ASIC, FPGA, GPU and CPU miner with dynamic
-clocking, monitoring, and fanspeed support for bitcoin. Do not use on multiple
-block chains at the same time!
+This is a multi-threaded, multi-blockchain, multi-pool ASIC, FPGA, GPU and CPU
+miner with dynamic clocking, monitoring, and fanspeed support for bitcoin.
 
 This code is provided entirely free of charge by the programmer in his spare
 time so donations would be greatly appreciated. Please consider donating to the
@@ -45,6 +44,10 @@ bfgminer -o http://pool:port -u username -p password
 Multiple pools:
 
 bfgminer -o http://pool1:port -u pool1username -p pool1password -o http://pool2:port -u pool2usernmae -p pool2password
+
+Multiple blockchains:
+
+bfgminer -o http://pool1:port -u pool1username -p pool1password --pool-goal default -o http://pool2:port -u pool2usernmae -p pool2password --pool-goal freicoin
 
 Single pool with a standard http proxy:
 
@@ -136,40 +139,56 @@ Optional Dependencies:
 BFGMiner driver configuration options:
 	--disable-other-drivers Build without drivers by default unless explicitly
 	                        enabled
+	--enable-broad-udevrules
+	                        Include udev rules for ambiguous devices which may
+	                        not be miners
+	--enable-alchemist      Compile support for AlcheMist (default disabled)
 	--disable-avalon        Compile support for Avalon (default enabled)
+	--disable-avalonmm      Compile support for Avalon2/3 (default enabled)
 	--enable-bfsb           Compile support for BFSB (default disabled)
-	--disable-bfx           Compile support for BFx2 (default if libusb)
+	--disable-bfx           Compile support for BFx2 (default enabled)
 	--disable-bifury        Compile support for Bi*Fury (default enabled)
 	--disable-bigpic        Compile support for Big Picture Mining USB (default
 	                        enabled)
 	--disable-bitforce      Compile support for BitForce (default enabled)
 	--disable-bitfury       Compile support for Bitfury (default enabled)
-	--enable-cpumining      Build with CPU mining support (default disabled)
+	--enable-bitmain        Compile support for Bitmain Antminer S* series
+	                        (default disabled)
+	--disable-cointerra     Compile support for CoinTerra (default enabled)
+	--enable-cpumining      Compile support for CPU mining (default disabled)
 	--disable-drillbit      Compile support for DrillBit (default enabled)
 	--disable-dualminer     Compile support for DualMiner (default enabled)
-	--disable-gridseed      Compile support for GridSeed (default enabled with
-	                        scrypt)
+	--disable-gridseed      Compile support for GridSeed (default enabled)
 	--disable-hashbuster    Compile support for HashBuster Nano (default
 	                        enabled)
-	--disable-hashbusterusb Compile support for HashBuster Micro (default if
-	                        libusb)
+	--disable-hashbusterusb Compile support for HashBuster Micro (default
+	                        enabled)
 	--disable-hashfast      Compile support for HashFast (default enabled)
 	--disable-icarus        Compile support for Icarus (default enabled)
+	--enable-jingtian       Compile support for JingTian (default disabled)
 	--disable-klondike      Compile support for Klondike (default enabled)
 	--enable-knc            Compile support for KnC (default disabled)
+	--enable-kncasic        Compile support for KnC gen 2 (default disabled)
 	--disable-littlefury    Compile support for LittleFury (default enabled)
 	--enable-metabank       Compile support for Metabank (default disabled)
+	--enable-minergate      Compile support for Spondoolies minergate interface
+	                        (default disabled)
+	--enable-minion         Compile support for Minion (default disabled)
 	--disable-modminer      Compile support for ModMiner (default enabled)
 	--disable-nanofury      Compile support for NanoFury (default enabled)
 	--enable-opencl         Compile support for OpenCL (default disabled)
 	--disable-adl           Build without ADL monitoring (default enabled)
-	--disable-twinfury      Compile support for Twinfury USB miner (default
-	                        enabled)
-	--disable-x6500         Compile support for X6500 (default if libusb)
-	--disable-ztex          Compile support for ZTEX (default if libusb)
+	--disable-rockminer     Compile support for RockMiner (default enabled)
+	--enable-titan          Compile support for KnC Titan (default disabled)
+	--disable-twinfury      Compile support for Twinfury (default enabled)
+	--disable-x6500         Compile support for X6500 (default enabled)
+	--disable-zeusminer     Compile support for ZeusMiner (default enabled)
+	--disable-ztex          Compile support for ZTEX (default enabled)
 
 BFGMiner algorithm configuration option:
-	--enable-scrypt         Compile support for scrypt mining (default disabled)
+	--enable-keccak         Compile support for Keccak (default disabled)
+	--disable-sha256d       Compile support for SHA256d (default enabled)
+	--enable-scrypt         Compile support for scrypt (default disabled)
 
 BFGMiner dependency configuration options:
 	--without-curses        Compile support for curses TUI (default enabled)
@@ -184,6 +203,9 @@ BFGMiner dependency configuration options:
 	                        Use system libblkmaker rather than bundled one
 	                        (default disabled)
 	--with-udevrulesdir=DIR Install udev rules into this directory
+	--with-udevrules-group=groupname
+	                        Configure mining devices to be owned by a specific
+	                        group (default `video')
 	--without-uio           Compile support for PCI devices via Linux UIO
 	                        interface (default enabled)
 	--without-vfio          Compile support for PCI devices via Linux VFIO
@@ -230,26 +252,33 @@ Options for both config file and command line:
 --api-mcast         Enable API Multicast listener, default: disabled
 --api-mcast-addr <arg> API Multicast listen address (default: "224.0.0.75")
 --api-mcast-code <arg> Code expected in the API Multicast message, don't use '-' (default: "FTW")
+--api-mcast-des <arg>  Description appended to the API Multicast reply, default: ''
 --api-mcast-port <arg> API Multicast listen port (default: 4028)
 --api-network       Allow API (if enabled) to listen on/for any address (default: only 127.0.0.1)
 --api-port          Port number of miner API (default: 4028)
 --balance           Change multipool strategy from failover to even share balance
 --benchmark         Run BFGMiner in benchmark mode - produces no shares
+--benchmark-intense Run BFGMiner in intensive benchmark mode - produces no shares
 --chroot-dir <arg>  Chroot to a directory right after startup
 --cmd-idle <arg>    Execute a command when a device is allowed to be idle (rest or wait)
 --cmd-sick <arg>    Execute a command when a device is declared sick
 --cmd-dead <arg>    Execute a command when a device is declared dead
---coinbase-addr <arg> Set coinbase payout address for solo mining
+--coinbase-check-addr <arg> A list of address to check against in coinbase payout list received from the previous-defined pool, separated by ','
+--coinbase-check-total <arg> The least total payout amount expected in coinbase received from the previous-defined pool
+--coinbase-check-percent <arg> The least benefit percentage expected for the sum of addr(s) listed in --cbaddr argument for previous-defined pool
 --coinbase-sig <arg> Set coinbase signature when possible
 --compact           Use compact display without per device statistics
 --debug|-D          Enable debug output
 --debuglog          Enable debug logging
+--device-protocol-dump Verbose dump of device protocol-level activities
 --device|-d <arg>   Enable only devices matching pattern (default: all)
 --disable-rejecting Automatically disable pools that continually reject shares
 --http-port <arg>   Port number to listen on for HTTP getwork miners (-1 means disabled) (default: -1)
 --expiry <arg>      Upper bound on how many seconds after getting work we consider a share from it stale (w/o longpoll active) (default: 120)
 --expiry-lp <arg>   Upper bound on how many seconds after getting work we consider a share from it stale (with longpoll active) (default: 3600)
 --failover-only     Don't leak work to backup pools when primary pool is lagging
+--failover-switch-delay <arg> Delay in seconds before switching back to a failed pool (default: 300)
+--generate-to <arg> Set an address to generate to for solo mining
 --force-dev-init    Always initialize devices when possible (such as bitstream uploads to some FPGAs)
 --kernel-path <arg> Specify a path to where bitstream and kernel files are
 --load-balance      Change multipool strategy from failover to quota based balance
@@ -260,6 +289,8 @@ Options for both config file and command line:
 --net-delay         Impose small delays in networking to avoid overloading slow routers
 --no-gbt            Disable getblocktemplate support
 --no-getwork        Disable getwork support
+--no-hotplug        Disable hotplug detection
+--no-local-bitcoin  Disable adding pools for local bitcoin RPC servers
 --no-longpoll       Disable X-Long-Polling support
 --no-pool-redirect  Ignore pool requests to redirect to another server
 --no-restart        Do not attempt to restart devices that hang
@@ -269,6 +300,8 @@ Options for both config file and command line:
 --noncelog <arg>    Create log of all nonces found
 --pass|-p <arg>     Password for bitcoin JSON-RPC server
 --per-device-stats  Force verbose mode and output per-device statistics
+--pool-goal <arg>   Named goal for the previous-defined pool
+--pool-priority <arg> Priority for just the previous-defined pool
 --pool-proxy|-x     Proxy URI to use for connecting to just the previous-defined pool
 --protocol-dump|-P  Verbose dump of protocol-level activities
 --queue|-Q <arg>    Minimum number of work items to have queued (0 - 10) (default: 1)
@@ -276,7 +309,6 @@ Options for both config file and command line:
 --quit-summary <arg> Summary printed when you quit: none/devs/procs/detailed
 --quota|-U <arg>    quota;URL combination for server with load-balance strategy quotas
 --real-quiet        Disable all output
---remove-disabled   Remove disabled devices entirely, as if they didn't exist
 --request-diff <arg> Request a specific difficulty from pools (default: 1.0)
 --retries <arg>     Number of times to retry failed submissions before giving up (-1 means never) (default: -1)
 --rotate <arg>      Change multipool strategy from failover to regularly rotate at N minutes (default: 0)
@@ -304,9 +336,12 @@ Options for both config file and command line:
 --verbose           Log verbose output to stderr as well as status output
 --weighed-stats     Display statistics weighed to difficulty 1
 --userpass|-O <arg> Username:Password pair for bitcoin JSON-RPC server
+--worktime                     Display extra work time debug information
 Options for command line only:
 --config|-c <arg>   Load a JSON-format configuration file
 See example.conf for an example configuration.
+--no-default-config Inhibit loading default config file
+--default-config    Always load the default config file
 --help|-h           Print this message
 --version|-V        Display version and exit
 
@@ -444,14 +479,16 @@ the range of current share difficulties, whether block notification is working
 work.
 
 The block display shows:
-Block: ...1b89f8d3 #217364  Diff:7.67M (54.93Th/s)  Started: [17:17:22]
+Block #217364: ...1b89f8d3  Diff:7.67M (54.93T)  Started: [17:17:22]  I:12.99mBTC/hr
 
-This shows a short stretch of the current block, the next block's height and
-difficulty (including the network hashrate that difficulty represents), and when
-the search for the new block started.
+This shows a short stretch of the next block's height, the current block,
+difficulty (including the network hashrate that difficulty represents), when the
+search for the new block started, and finally expected Income, calculated by
+actual shares submitted in 100% PPS value (assumes Bitcoin, does not account for
+altcoin conversions!).
 
 The BFGMiner status line shows:
- ST:1  F:0  NB:1  AS:0  BW:[ 75/241 B/s]  E:2.42  I:12.99mBTC/hr  BS:2.71k
+ ST:1  F:0  NB:1  AS:0  BW:[ 75/241 B/s]  E:2.42  BS:2.71k
 
 ST is STaged work items (ready to use).
 F  is network Failure occasions (server down or slow to provide work)
@@ -460,8 +497,6 @@ AS is Active Submissions (shares in the process of submitting)
 BW is BandWidth usage on the network (received/sent)
 E  is Efficiency defined as number of shares accepted (multiplied by their
           difficulty) per 2 KB of bandwidth
-I  is expected Income, calculated by actual shares submitted in 100% PPS value
-          (assumes Bitcoin, does not account for altcoin conversions!)
 BS is the all time Best Share difficulty you've found
 
 The totals line shows the following:
@@ -534,15 +569,20 @@ SOLO MINING
 
 BFGMiner supports solo mining with any GBT-compatible bitcoin node (such as
 bitcoind). To use this mode, you need to specify the URL of your bitcoind node
-using the usual pool options (--url, --userpass, etc), and the --coinbase-addr
+using the usual pool options (--url, --userpass, etc), and the --generate-to
 option to specify the Bitcoin address you wish to receive the block rewards
-mined. If you are solo mining with more than one instance of BFGMiner (or any
-other software) per payout address, you must also specify data using the
+mined. When you run Bitcoin Core on the same computer as your miner, the pool
+itself will be automatically configured for you (on the default goal). Please be
+aware that solo mining via GBT is at this time only supported for Bitcoin.
+
+IMPORTANT: If you are solo mining with more than one instance of BFGMiner (or
+any other software) per payout address, you must also specify data using the
 --coinbase-sig option to ensure each miner is working on unique work. Note
 that this data will be publicly seen if your miner finds a block using any
-GBT-enabled pool, even when not solo mining (such as failover). If your
-bitcoin node does not support longpolling (for example, bitcoind 0.8.x), you
-should consider setting up a failover pool to provide you with block
+GBT-enabled pool, even when not solo mining (such as failover).
+
+If your bitcoin node does not support longpolling (for example, bitcoind 0.8.x),
+you should consider setting up a failover pool to provide you with block
 notifications. Note that solo mining does not use shares, so BFGMiner's adjusted
 hashrate (third column) may suddenly drop to zero if a block you submit is
 rejected; this does not indicate that it has stopped mining.
@@ -550,7 +590,20 @@ rejected; this does not indicate that it has stopped mining.
 Example solo mining usage:
 
 bfgminer -o http://localhost:8332 -u username -p password \
-    --coinbase-addr 1QATWksNFGeUJCWBrN4g6hGM178Lovm7Wh \
+    --generate-to 1QATWksNFGeUJCWBrN4g6hGM178Lovm7Wh \
+    --coinbase-sig "rig1: This is Joe's block!"
+
+If you want to solo mine on multiple GBT-compatible Bitcoin blockchains, you can
+specify --generate-to multiple times with a goal name prefix followed by a
+colon. Note that at this time, the coinbase sig is always shared across all
+goals/pools.
+
+Example multi-blockchain solo mining usage:
+
+bfgminer -o http://localhost:8332 -u username -p password \
+    --generate-to 1QATWksNFGeUJCWBrN4g6hGM178Lovm7Wh \
+    -o http://localhost:7221 -u user2 -p password --pool-goal mychain \
+    --generate-to mychain:1QATWksNFGeUJCWBrN4g6hGM178Lovm7Wh \
     --coinbase-sig "rig1: This is Joe's block!"
 
 
@@ -774,7 +827,9 @@ Q: Is there a "bare-metal" version?
 A: Yes, there are a few dedicated mining operating systems built on BFGMiner:
 Name        Website                              Hardware
 ----        -------                              --------
+Controla    http://hashra.com/support            Raspberry Pi
 MinePeon    http://mineforeman.com/minepeon/     BeagleBone Black, Raspberry Pi
+Minera      http://getminera.com/                Raspberry Pi
 PiMP        http://getpimp.org/                  x86
 
 Q: I'm having an issue. What debugging information should I provide?

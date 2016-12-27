@@ -7,8 +7,12 @@
 
 #include <blktemplate.h>
 
-#define BLKMAKER_VERSION (5L)
-#define BLKMAKER_MAX_BLOCK_VERSION (2)
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+#define BLKMAKER_VERSION (7L)
+#define BLKMAKER_MAX_BLOCK_VERSION (4)
 
 extern bool (*blkmk_sha256_impl)(void *hash_out, const void *data, size_t datasz);
 
@@ -25,5 +29,9 @@ extern unsigned long blkmk_work_left(const blktemplate_t *);
 #define BLKMK_UNLIMITED_WORK_COUNT  ULONG_MAX
 
 extern size_t blkmk_address_to_script(void *out, size_t outsz, const char *addr);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

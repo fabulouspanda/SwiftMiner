@@ -2,7 +2,7 @@
 //  bfgminerViewController.h
 //  MacMiner
 //
-//  Created by Administrator on 01/05/2013.
+//  Created by fabulouspanda on 01/05/2013.
 //  Copyright (c) 2013 fabulouspanda. All rights reserved.
 //
 #import <Cocoa/Cocoa.h>
