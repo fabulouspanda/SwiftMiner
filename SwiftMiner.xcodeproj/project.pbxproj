@@ -1,0 +1,540 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		841D118119408E240080F8D3 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841D118019408E240080F8D3 /* main.swift */; };
+		841D118319408E240080F8D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841D118219408E240080F8D3 /* AppDelegate.swift */; };
+		841D118619408E240080F8D3 /* MacMiner.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 841D118419408E240080F8D3 /* MacMiner.xcdatamodeld */; };
+		841D118819408E240080F8D3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 841D118719408E240080F8D3 /* Images.xcassets */; };
+		841D118B19408E240080F8D3 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 841D118919408E240080F8D3 /* MainMenu.xib */; };
+		841D119719408E240080F8D3 /* MacMinerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841D119619408E240080F8D3 /* MacMinerTests.swift */; };
+		841D11AD194090880080F8D3 /* menu2.png in Resources */ = {isa = PBXBuildFile; fileRef = 841D11A1194090880080F8D3 /* menu2.png */; };
+		841D11AE194090880080F8D3 /* fabric.png in Resources */ = {isa = PBXBuildFile; fileRef = 841D11A2194090880080F8D3 /* fabric.png */; };
+		841D11AF194090880080F8D3 /* pool.png in Resources */ = {isa = PBXBuildFile; fileRef = 841D11A3194090880080F8D3 /* pool.png */; };
+		841D11B0194090880080F8D3 /* mobileminer.png in Resources */ = {isa = PBXBuildFile; fileRef = 841D11A4194090880080F8D3 /* mobileminer.png */; };
+		841D11B1194090880080F8D3 /* welcomeback.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 841D11A5194090880080F8D3 /* welcomeback.jpg */; };
+		841D11B2194090880080F8D3 /* bfgDockLabel.png in Resources */ = {isa = PBXBuildFile; fileRef = 841D11A6194090880080F8D3 /* bfgDockLabel.png */; };
+		841D11B3194090880080F8D3 /* cpuDockLabel.png in Resources */ = {isa = PBXBuildFile; fileRef = 841D11A7194090880080F8D3 /* cpuDockLabel.png */; };
+		841D11B4194090880080F8D3 /* cgDockLabel.png in Resources */ = {isa = PBXBuildFile; fileRef = 841D11A8194090880080F8D3 /* cgDockLabel.png */; };
+		841D11B6194090880080F8D3 /* setupbackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 841D11AA194090880080F8D3 /* setupbackground.jpg */; };
+		841D11B7194090880080F8D3 /* whiter.png in Resources */ = {isa = PBXBuildFile; fileRef = 841D11AB194090880080F8D3 /* whiter.png */; };
+		841D11B8194090880080F8D3 /* asicDock.png in Resources */ = {isa = PBXBuildFile; fileRef = 841D11AC194090880080F8D3 /* asicDock.png */; };
+		841D11BC1940A9FE0080F8D3 /* SwiftMiner.png in Resources */ = {isa = PBXBuildFile; fileRef = 841D11BB1940A9FE0080F8D3 /* SwiftMiner.png */; };
+		841D11C31940ACDC0080F8D3 /* bfgminer in Resources */ = {isa = PBXBuildFile; fileRef = 841D11BD1940ACDC0080F8D3 /* bfgminer */; };
+		841D11C41940ACDC0080F8D3 /* curl in Resources */ = {isa = PBXBuildFile; fileRef = 841D11BE1940ACDC0080F8D3 /* curl */; };
+		841D11C51940ACDC0080F8D3 /* jansson in Resources */ = {isa = PBXBuildFile; fileRef = 841D11BF1940ACDC0080F8D3 /* jansson */; };
+		841D11C61940ACDC0080F8D3 /* libusb in Resources */ = {isa = PBXBuildFile; fileRef = 841D11C01940ACDC0080F8D3 /* libusb */; };
+		841D11C71940ACDC0080F8D3 /* libidn in Resources */ = {isa = PBXBuildFile; fileRef = 841D11C11940ACDC0080F8D3 /* libidn */; };
+		841D11C81940ACDC0080F8D3 /* openssl in Resources */ = {isa = PBXBuildFile; fileRef = 841D11C21940ACDC0080F8D3 /* openssl */; };
+		841D11CC1940EE1B0080F8D3 /* bfgminerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 841D11CB1940EE1B0080F8D3 /* bfgminerViewController.m */; };
+		841D11D01940EE580080F8D3 /* TaskWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 841D11CE1940EE580080F8D3 /* TaskWrapper.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		841D119119408E240080F8D3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 841D117319408E240080F8D3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 841D117A19408E240080F8D3;
+			remoteInfo = MacMiner;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		841D117B19408E240080F8D3 /* SwiftMiner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftMiner.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		841D117F19408E240080F8D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		841D118019408E240080F8D3 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		841D118219408E240080F8D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		841D118519408E240080F8D3 /* MacMiner.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MacMiner.xcdatamodel; sourceTree = "<group>"; };
+		841D118719408E240080F8D3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		841D118A19408E240080F8D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		841D119019408E240080F8D3 /* SwiftMinerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftMinerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		841D119519408E240080F8D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		841D119619408E240080F8D3 /* MacMinerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacMinerTests.swift; sourceTree = "<group>"; };
+		841D11A1194090880080F8D3 /* menu2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu2.png; sourceTree = "<group>"; };
+		841D11A2194090880080F8D3 /* fabric.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fabric.png; sourceTree = "<group>"; };
+		841D11A3194090880080F8D3 /* pool.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pool.png; sourceTree = "<group>"; };
+		841D11A4194090880080F8D3 /* mobileminer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mobileminer.png; sourceTree = "<group>"; };
+		841D11A5194090880080F8D3 /* welcomeback.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = welcomeback.jpg; sourceTree = "<group>"; };
+		841D11A6194090880080F8D3 /* bfgDockLabel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bfgDockLabel.png; sourceTree = "<group>"; };
+		841D11A7194090880080F8D3 /* cpuDockLabel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cpuDockLabel.png; sourceTree = "<group>"; };
+		841D11A8194090880080F8D3 /* cgDockLabel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cgDockLabel.png; sourceTree = "<group>"; };
+		841D11AA194090880080F8D3 /* setupbackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = setupbackground.jpg; sourceTree = "<group>"; };
+		841D11AB194090880080F8D3 /* whiter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whiter.png; sourceTree = "<group>"; };
+		841D11AC194090880080F8D3 /* asicDock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = asicDock.png; sourceTree = "<group>"; };
+		841D11BB1940A9FE0080F8D3 /* SwiftMiner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SwiftMiner.png; sourceTree = "<group>"; };
+		841D11BD1940ACDC0080F8D3 /* bfgminer */ = {isa = PBXFileReference; lastKnownFileType = folder; path = bfgminer; sourceTree = "<group>"; };
+		841D11BE1940ACDC0080F8D3 /* curl */ = {isa = PBXFileReference; lastKnownFileType = folder; path = curl; sourceTree = "<group>"; };
+		841D11BF1940ACDC0080F8D3 /* jansson */ = {isa = PBXFileReference; lastKnownFileType = folder; path = jansson; sourceTree = "<group>"; };
+		841D11C01940ACDC0080F8D3 /* libusb */ = {isa = PBXFileReference; lastKnownFileType = folder; path = libusb; sourceTree = "<group>"; };
+		841D11C11940ACDC0080F8D3 /* libidn */ = {isa = PBXFileReference; lastKnownFileType = folder; path = libidn; sourceTree = "<group>"; };
+		841D11C21940ACDC0080F8D3 /* openssl */ = {isa = PBXFileReference; lastKnownFileType = folder; path = openssl; sourceTree = "<group>"; };
+		841D11C91940EE1A0080F8D3 /* SwiftMiner-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftMiner-Bridging-Header.h"; sourceTree = "<group>"; };
+		841D11CA1940EE1B0080F8D3 /* bfgminerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bfgminerViewController.h; sourceTree = "<group>"; };
+		841D11CB1940EE1B0080F8D3 /* bfgminerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = bfgminerViewController.m; sourceTree = "<group>"; };
+		841D11CD1940EE580080F8D3 /* TaskWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskWrapper.h; sourceTree = "<group>"; };
+		841D11CE1940EE580080F8D3 /* TaskWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskWrapper.m; sourceTree = "<group>"; };
+		841D11CF1940EE580080F8D3 /* TaskWrapperDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskWrapperDelegate.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		841D117819408E240080F8D3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		841D118D19408E240080F8D3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		841D117219408E240080F8D3 = {
+			isa = PBXGroup;
+			children = (
+				841D117D19408E240080F8D3 /* SwiftMiner */,
+				841D119319408E240080F8D3 /* MacMinerTests */,
+				841D117C19408E240080F8D3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		841D117C19408E240080F8D3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				841D117B19408E240080F8D3 /* SwiftMiner.app */,
+				841D119019408E240080F8D3 /* SwiftMinerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		841D117D19408E240080F8D3 /* SwiftMiner */ = {
+			isa = PBXGroup;
+			children = (
+				841D11CA1940EE1B0080F8D3 /* bfgminerViewController.h */,
+				841D11CB1940EE1B0080F8D3 /* bfgminerViewController.m */,
+				841D11CD1940EE580080F8D3 /* TaskWrapper.h */,
+				841D11CE1940EE580080F8D3 /* TaskWrapper.m */,
+				841D11CF1940EE580080F8D3 /* TaskWrapperDelegate.h */,
+				841D11BD1940ACDC0080F8D3 /* bfgminer */,
+				841D11BE1940ACDC0080F8D3 /* curl */,
+				841D11BF1940ACDC0080F8D3 /* jansson */,
+				841D11C01940ACDC0080F8D3 /* libusb */,
+				841D11C11940ACDC0080F8D3 /* libidn */,
+				841D11C21940ACDC0080F8D3 /* openssl */,
+				841D118219408E240080F8D3 /* AppDelegate.swift */,
+				841D11A0194090340080F8D3 /* images */,
+				841D118719408E240080F8D3 /* Images.xcassets */,
+				841D118919408E240080F8D3 /* MainMenu.xib */,
+				841D118419408E240080F8D3 /* MacMiner.xcdatamodeld */,
+				841D117E19408E240080F8D3 /* Supporting Files */,
+				841D11C91940EE1A0080F8D3 /* SwiftMiner-Bridging-Header.h */,
+			);
+			name = SwiftMiner;
+			path = MacMiner;
+			sourceTree = "<group>";
+		};
+		841D117E19408E240080F8D3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				841D117F19408E240080F8D3 /* Info.plist */,
+				841D118019408E240080F8D3 /* main.swift */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		841D119319408E240080F8D3 /* MacMinerTests */ = {
+			isa = PBXGroup;
+			children = (
+				841D119619408E240080F8D3 /* MacMinerTests.swift */,
+				841D119419408E240080F8D3 /* Supporting Files */,
+			);
+			path = MacMinerTests;
+			sourceTree = "<group>";
+		};
+		841D119419408E240080F8D3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				841D119519408E240080F8D3 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		841D11A0194090340080F8D3 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				841D11BB1940A9FE0080F8D3 /* SwiftMiner.png */,
+				841D11A1194090880080F8D3 /* menu2.png */,
+				841D11A2194090880080F8D3 /* fabric.png */,
+				841D11A3194090880080F8D3 /* pool.png */,
+				841D11A4194090880080F8D3 /* mobileminer.png */,
+				841D11A5194090880080F8D3 /* welcomeback.jpg */,
+				841D11A6194090880080F8D3 /* bfgDockLabel.png */,
+				841D11A7194090880080F8D3 /* cpuDockLabel.png */,
+				841D11A8194090880080F8D3 /* cgDockLabel.png */,
+				841D11AA194090880080F8D3 /* setupbackground.jpg */,
+				841D11AB194090880080F8D3 /* whiter.png */,
+				841D11AC194090880080F8D3 /* asicDock.png */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		841D117A19408E240080F8D3 /* SwiftMiner */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 841D119A19408E240080F8D3 /* Build configuration list for PBXNativeTarget "SwiftMiner" */;
+			buildPhases = (
+				841D117719408E240080F8D3 /* Sources */,
+				841D117819408E240080F8D3 /* Frameworks */,
+				841D117919408E240080F8D3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftMiner;
+			productName = MacMiner;
+			productReference = 841D117B19408E240080F8D3 /* SwiftMiner.app */;
+			productType = "com.apple.product-type.application";
+		};
+		841D118F19408E240080F8D3 /* SwiftMinerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 841D119D19408E240080F8D3 /* Build configuration list for PBXNativeTarget "SwiftMinerTests" */;
+			buildPhases = (
+				841D118C19408E240080F8D3 /* Sources */,
+				841D118D19408E240080F8D3 /* Frameworks */,
+				841D118E19408E240080F8D3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				841D119219408E240080F8D3 /* PBXTargetDependency */,
+			);
+			name = SwiftMinerTests;
+			productName = MacMinerTests;
+			productReference = 841D119019408E240080F8D3 /* SwiftMinerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		841D117319408E240080F8D3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = fabulouspanda;
+				TargetAttributes = {
+					841D117A19408E240080F8D3 = {
+						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = P4V789N8T7;
+					};
+					841D118F19408E240080F8D3 = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = 841D117A19408E240080F8D3;
+					};
+				};
+			};
+			buildConfigurationList = 841D117619408E240080F8D3 /* Build configuration list for PBXProject "SwiftMiner" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 841D117219408E240080F8D3;
+			productRefGroup = 841D117C19408E240080F8D3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				841D117A19408E240080F8D3 /* SwiftMiner */,
+				841D118F19408E240080F8D3 /* SwiftMinerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		841D117919408E240080F8D3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				841D11B1194090880080F8D3 /* welcomeback.jpg in Resources */,
+				841D11C61940ACDC0080F8D3 /* libusb in Resources */,
+				841D11AE194090880080F8D3 /* fabric.png in Resources */,
+				841D11C81940ACDC0080F8D3 /* openssl in Resources */,
+				841D11B3194090880080F8D3 /* cpuDockLabel.png in Resources */,
+				841D11AF194090880080F8D3 /* pool.png in Resources */,
+				841D11C71940ACDC0080F8D3 /* libidn in Resources */,
+				841D11B2194090880080F8D3 /* bfgDockLabel.png in Resources */,
+				841D11AD194090880080F8D3 /* menu2.png in Resources */,
+				841D118819408E240080F8D3 /* Images.xcassets in Resources */,
+				841D118B19408E240080F8D3 /* MainMenu.xib in Resources */,
+				841D11B0194090880080F8D3 /* mobileminer.png in Resources */,
+				841D11B8194090880080F8D3 /* asicDock.png in Resources */,
+				841D11C41940ACDC0080F8D3 /* curl in Resources */,
+				841D11C31940ACDC0080F8D3 /* bfgminer in Resources */,
+				841D11B7194090880080F8D3 /* whiter.png in Resources */,
+				841D11BC1940A9FE0080F8D3 /* SwiftMiner.png in Resources */,
+				841D11B4194090880080F8D3 /* cgDockLabel.png in Resources */,
+				841D11B6194090880080F8D3 /* setupbackground.jpg in Resources */,
+				841D11C51940ACDC0080F8D3 /* jansson in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		841D118E19408E240080F8D3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		841D117719408E240080F8D3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				841D118619408E240080F8D3 /* MacMiner.xcdatamodeld in Sources */,
+				841D118319408E240080F8D3 /* AppDelegate.swift in Sources */,
+				841D11D01940EE580080F8D3 /* TaskWrapper.m in Sources */,
+				841D118119408E240080F8D3 /* main.swift in Sources */,
+				841D11CC1940EE1B0080F8D3 /* bfgminerViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		841D118C19408E240080F8D3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				841D119719408E240080F8D3 /* MacMinerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		841D119219408E240080F8D3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 841D117A19408E240080F8D3 /* SwiftMiner */;
+			targetProxy = 841D119119408E240080F8D3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		841D118919408E240080F8D3 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				841D118A19408E240080F8D3 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		841D119819408E240080F8D3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				METAL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		841D119919408E240080F8D3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				METAL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		841D119B19408E240080F8D3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = P4V789N8T7;
+				INFOPLIST_FILE = MacMiner/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = SwiftMiner;
+				SWIFT_OBJC_BRIDGING_HEADER = "MacMiner/SwiftMiner-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		841D119C19408E240080F8D3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = P4V789N8T7;
+				INFOPLIST_FILE = MacMiner/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = SwiftMiner;
+				SWIFT_OBJC_BRIDGING_HEADER = "MacMiner/SwiftMiner-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		841D119E19408E240080F8D3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MacMiner.app/Contents/MacOS/MacMiner";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MacMinerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				METAL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = SwiftMinerTests;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Debug;
+		};
+		841D119F19408E240080F8D3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MacMiner.app/Contents/MacOS/MacMiner";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MacMinerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				METAL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SwiftMinerTests;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		841D117619408E240080F8D3 /* Build configuration list for PBXProject "SwiftMiner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				841D119819408E240080F8D3 /* Debug */,
+				841D119919408E240080F8D3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		841D119A19408E240080F8D3 /* Build configuration list for PBXNativeTarget "SwiftMiner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				841D119B19408E240080F8D3 /* Debug */,
+				841D119C19408E240080F8D3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		841D119D19408E240080F8D3 /* Build configuration list for PBXNativeTarget "SwiftMinerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				841D119E19408E240080F8D3 /* Debug */,
+				841D119F19408E240080F8D3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		841D118419408E240080F8D3 /* MacMiner.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				841D118519408E240080F8D3 /* MacMiner.xcdatamodel */,
+			);
+			currentVersion = 841D118519408E240080F8D3 /* MacMiner.xcdatamodel */;
+			path = MacMiner.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 841D117319408E240080F8D3 /* Project object */;
+}
