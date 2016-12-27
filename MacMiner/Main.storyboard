@@ -89,7 +89,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="148" id="xyz-BD-ETj"/>
                                 </constraints>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" alignment="right" title="0" placeholderString="0" id="EXh-Gb-PNY">
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" state="on" alignment="right" title="0" placeholderString="0" id="EXh-Gb-PNY">
                                     <font key="font" size="32" name="AvenirNext-UltraLight"/>
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -105,7 +105,7 @@
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <connections>
-                                    <segue destination="ahw-7K-gr2" kind="show" id="b83-ZD-CQ0"/>
+                                    <segue destination="lWG-pI-xLn" kind="show" id="9my-tY-YlS"/>
                                 </connections>
                             </button>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uw0-Ji-Zwm">
@@ -524,6 +524,9 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="optionsApply:" target="KiV-8h-hev" id="RjH-Na-Xi0"/>
+                                </connections>
                             </button>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tEq-Ob-0IW">
                                 <rect key="frame" x="109" y="153" width="398" height="22"/>
@@ -546,9 +549,36 @@
                         </subviews>
                     </view>
                 </viewController>
+                <customObject id="KiV-8h-hev" customClass="bfgminerViewController">
+                    <connections>
+                        <outlet property="bfgOptionsView" destination="tEq-Ob-0IW" id="ow5-Vg-hnK"/>
+                        <outlet property="bfgOutputView" destination="0VU-dj-kj9" id="z0R-BQ-Zuy"/>
+                        <outlet property="bfgStartButton" destination="Cfy-Hj-oAI" id="HPR-I8-fs7"/>
+                        <outlet property="bfgView" destination="zbx-ze-Kb8" id="gR2-r7-gaG"/>
+                        <outlet property="hashRead" destination="tWG-j2-bxn" id="4aL-0P-934"/>
+                    </connections>
+                </customObject>
                 <customObject id="C0q-tZ-0lK" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="88.5" y="578.5"/>
+            <point key="canvasLocation" x="290" y="590"/>
+        </scene>
+        <!--Window Controller-->
+        <scene sceneID="d0q-xW-kL4">
+            <objects>
+                <windowController id="lWG-pI-xLn" sceneMemberID="viewController">
+                    <window key="window" title="Options" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="bfgOpts" animationBehavior="default" id="a3c-5W-4dy">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+                        <rect key="contentRect" x="425" y="461" width="480" height="270"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1417"/>
+                    </window>
+                    <connections>
+                        <segue destination="ahw-7K-gr2" kind="relationship" relationship="window.shadowedContentViewController" id="g4s-q8-fdz"/>
+                    </connections>
+                </windowController>
+                <customObject id="yvo-9d-Vvj" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-230" y="888"/>
         </scene>
     </scenes>
     <resources>
